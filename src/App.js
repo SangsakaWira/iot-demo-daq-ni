@@ -16,17 +16,16 @@ function App() {
           "https://api.thingspeak.com/channels/2068505/feeds.json?api_key=S86PHXT0AX1NYNGO&results=2"
         )
         .then((doc) => {
-          console.log(doc.data.feeds[0].field1);
           setData({
-            temperature: doc.data.feeds[0].field1,
-            pressure: doc.data.feeds[0].field2,
-            level: doc.data.feeds[0].field3
+            temperature: doc.data.feeds[1].field1,
+            pressure: doc.data.feeds[1].field2,
+            level: doc.data.feeds[1].field3
           });
         })
         .catch((err) => {
           console.log(err);
         });
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (
