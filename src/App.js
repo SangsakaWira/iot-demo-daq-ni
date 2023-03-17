@@ -4,9 +4,9 @@ import axios from "axios";
 
 function App() {
   const [data, setData] = useState({
-    temperature: "0",
-    pressure: "0",
-    humidity: "0"
+    temperature: "Loading...",
+    pressure: "Loading...",
+    level: "Loading..."
   });
 
   useEffect(() => {
